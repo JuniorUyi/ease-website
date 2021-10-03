@@ -29,11 +29,5 @@ module.exports = {
       },
       __key: 'images',
     },
-    {
-      resolve: `gatsby-source-custom`,
-      options: {
-        apiKey: process.env.API_KEY,
-      },
-    },
   ],
 };
