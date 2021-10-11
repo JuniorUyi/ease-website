@@ -17,8 +17,6 @@ body {
 
 h1,
 p {
-  color: #fff;
-  text-align: center;
   line-height: 1.4;
 }
 
@@ -30,24 +28,27 @@ h1 {
 h2 {
   color: #000;
   font-size: 1.3rem;
-  text-align: center;
   line-height: 1.4;
   margin-bottom: 10px;
 }
 /* NAVIGATION */
 
-.navbar {
-  background-color: #23d5ab;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  align-items: center;
-  align-content: space-evenly;
-  grid-gap: 1.5em;
-  // height: 50px;
-  padding-top: 1rem;
-  overflow: hidden;
-}
-
 .nav-item a {
   text-decoration: none;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inline-block {
+  p {
+    display: inline-block;
+    width: auto;
+    &:first-child {
+      width: 200px;
+      margin-right: 1em;
+    }
+  }
 }

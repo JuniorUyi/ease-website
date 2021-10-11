@@ -6,21 +6,20 @@ import Logo from './Logo';
 import NavList from './NavList';
 
 const NavContainer = styled.nav`
-  background-color: #23d5ab;
   display: grid;
   grid-auto-flow: column;
-  // grid-template-columns: 1fr 3fr;
+  background-color: #23d5ab;
+  grid-template-columns: 1fr 3fr;
   align-items: center;
-  // align-content: space-evenly;
-  // grid-gap: 1.5em;
-  // height: 50px;
+  align-content: space-evenly;
+  grid-gap: 1.5em;
   padding-top: 1rem;
   overflow: hidden;
 `;
 
 export default function Navbar() {
   return (
-    <NavContainer className="navbar">
+    <NavContainer>
       <Logo />
       <NavList />
 
