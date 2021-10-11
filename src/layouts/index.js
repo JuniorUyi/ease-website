@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import NavBar from '../components/navbar/navbar';
+import Header from '../components/Header';
 
 export default function Layout({ children }) {
   return (
-    <div>
-      {children}
-      <NavBar />
-    </div>
+    <>
+      <Header />
+      <main>{children}</main>
+    </>
   );
 }
