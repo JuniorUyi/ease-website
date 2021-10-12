@@ -14,26 +14,36 @@ const NavListWrapper = styled.ul`
   grid-gap: 1.5em;
 `;
 
+export const NavListLink = styled(Link)`
+  color: whitesmoke;
+  text-decoration: none;
+
+  &.active {
+    color: cadetblue;
+    text-decoration: underline;
+  }
+`;
+
 export default function NavList() {
   return (
     <NavListWrapper>
       <li className="nav-item">
-        <Link to="/about">About us</Link>
+        <NavListLink to="/about">About us</NavListLink>
       </li>
       <li className="nav-item">
-        <Link to="/products">Our Products</Link>
+        <NavListLink to="/products">Our Products</NavListLink>
       </li>
       <li className="nav-item">
-        <Link to="/professionals">Professionals</Link>
+        <NavListLink to="/professionals">Professionals</NavListLink>
       </li>
       <li className="nav-item">
-        <Link to="/patients">Patients</Link>
+        <NavListLink to="/patients">Patients</NavListLink>
       </li>
       <li className="nav-item">
-        <Link to="/news">News &amp; Events</Link>
+        <NavListLink to="/news">News &amp; Events</NavListLink>
       </li>
       <li className="nav-item">
-        <Link to="/contact">Contact us</Link>
+        <NavListLink to="/contact">Contact us</NavListLink>
       </li>
     </NavListWrapper>
   );

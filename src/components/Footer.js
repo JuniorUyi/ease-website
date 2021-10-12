@@ -49,6 +49,15 @@ const contacts = [
   { department: 'General Enquiries', contact: 'info@surgease.co.uk' },
 ];
 
+const locations = [
+  {
+    address: 'Nelson Lancashire BB9 9BT UK',
+  },
+  {
+    address: 'London 19 EastBourne Terrace Paddington Station WT 6LG UK',
+  },
+];
+
 export default function Footer() {
   return (
     <FooterContainer>
@@ -57,24 +66,27 @@ export default function Footer() {
         <div>
           <FooterHeading>Links</FooterHeading>
           <GridThree>
-            {footerLinks.map(({ content }) => (
-              <p>{content}</p>
+            {footerLinks.map(({ content }, i) => (
+              <p key={i}>{content}</p>
             ))}
           </GridThree>
         </div>
         <div>
           <FooterHeading>Contact us</FooterHeading>
           <ContactList>
-            {contacts.map(({ department, contact }) => (
-              <div className="inline-block">
+            {contacts.map(({ department, contact }, i) => (
+              <div key={i} className="inline-block">
                 <p>{department}</p>
                 <p>{contact}</p>
               </div>
             ))}
           </ContactList>
         </div>
-        <div>
+        <div style={{ color: '#fff' }}>
           <FooterHeading>Find us</FooterHeading>
+          {locations.map(({ address }, i) => (
+            <p key={i}>{address}</p>
+          ))}
         </div>
       </Wrapper>
     </FooterContainer>
